@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin:0; background:oklch(98% 0.006 80); }
+  a { color: oklch(45% 0.13 40); text-decoration: none; }
+  a:hover { color: oklch(38% 0.14 40); text-decoration: underline; }
+  ::selection { background: oklch(85% 0.05 40); }
+</style>
+</helmet>
+
+<div style="font-family:'Public Sans',sans-serif; color:oklch(18% 0.01 80); background:oklch(98% 0.006 80); width:100%; max-width:100%; overflow-x:hidden;">
+
+  <!-- HEADER -->
+  <header style="position:sticky; top:0; z-index:50; background:oklch(98% 0.006 80 / 0.92); backdrop-filter:blur(8px); border-bottom:1px solid oklch(88% 0.01 80); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; padding:16px clamp(20px,4vw,48px);">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <img src="uploads/Black and White Elegant Initials Logo.png" alt="Bastrop's Best Property Management" style="height:48px; width:48px; object-fit:contain;">
+      <div style="font-family:'Archivo',sans-serif; font-weight:800; font-size:16px; letter-spacing:0.02em; line-height:1.15;">
+        BASTROP'S BEST<br><span style="font-weight:600; font-size:11px; letter-spacing:0.12em; color:oklch(45% 0.01 80);">PROPERTY MANAGEMENT</span>
+      </div>
+    </div>
+    <nav style="display:flex; align-items:center; gap:20px; row-gap:12px; font-size:15px; font-weight:600; flex-wrap:wrap; justify-content:flex-end;">
+      <a href="#services" style="color:oklch(18% 0.01 80);">Services</a>
+      <a href="#how-it-works" style="color:oklch(18% 0.01 80);">How It Works</a>
+      <a href="#portal" style="color:oklch(18% 0.01 80);">Portal Login</a>
+      <a href="#team" style="color:oklch(18% 0.01 80);">Team</a>
+      <a href="#area" style="color:oklch(18% 0.01 80);">Service Area</a>
+      <a href="#contact" style="color:oklch(18% 0.01 80);">Contact</a>
+      <a href="#contact" style="background:oklch(20% 0.01 80); color:oklch(98% 0.006 80); padding:10px 20px; border-radius:2px; font-weight:700;">Get a Quote</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section style="display:grid; grid-template-columns:repeat(auto-fit,minmax(360px,1fr)); gap:64px; padding:clamp(56px,8vw,96px) clamp(20px,4vw,48px) 80px; align-items:center; max-width:1440px; margin:0 auto;">
+    <div>
+      <div style="font-size:13px; font-weight:700; letter-spacing:0.14em; color:oklch(45% 0.13 40); margin-bottom:20px;">BASTROP COUNTY, TEXAS</div>
+      <h1 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(32px,4.5vw,56px); line-height:1.08; margin:0 0 24px; letter-spacing:-0.01em;">Property management, handled like neighbors would handle it.</h1>
+      <p style="font-size:19px; line-height:1.6; color:oklch(32% 0.01 80); max-width:520px; margin:0 0 36px;">Once your tenant is in place, we take over the day-to-day — rent collection, maintenance, inspections, and owner reporting — so your investment runs smoothly and your tenants are treated well.</p>
+      <div style="display:flex; gap:16px; flex-wrap:wrap;">
+        <a href="#contact" style="background:oklch(20% 0.01 80); color:oklch(98% 0.006 80); padding:16px 28px; border-radius:2px; font-weight:700; font-size:16px;">Request a Management Quote</a>
+        <a href="#portal" style="border:1.5px solid oklch(20% 0.01 80); color:oklch(20% 0.01 80); padding:16px 28px; border-radius:2px; font-weight:700; font-size:16px;">Resident &amp; Owner Login</a>
+      </div>
+    </div>
+    <image-slot id="hero-property-photo" shape="rounded" radius="4" placeholder="Bastrop County home exterior photo" style="width:100%; height:460px; display:block;"></image-slot>
+  </section>
+
+  <!-- PROPERTY PHOTO STRIP -->
+  <section style="max-width:1440px; margin:0 auto; padding:0 clamp(20px,4vw,48px) 80px; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px;">
+    <image-slot id="property-photo-1" shape="rounded" radius="4" placeholder="Single-family rental photo" style="width:100%; height:220px; display:block;"></image-slot>
+    <image-slot id="property-photo-2" shape="rounded" radius="4" placeholder="Duplex / small multi-family photo" style="width:100%; height:220px; display:block;"></image-slot>
+    <image-slot id="property-photo-3" shape="rounded" radius="4" placeholder="Interior / maintenance photo" style="width:100%; height:220px; display:block;"></image-slot>
+  </section>
+
+  <!-- WISDOM HOUSE RELATIONSHIP BANNER -->
+  <section style="max-width:1440px; margin:0 auto; padding:0 clamp(20px,4vw,48px) 80px;">
+    <div style="border:1px solid oklch(88% 0.01 80); border-radius:4px; padding:32px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; background:oklch(100% 0 0);">
+      <div style="max-width:640px;">
+        <div style="font-weight:700; font-size:16px; margin-bottom:8px;">Need a tenant placed first?</div>
+        <p style="margin:0; color:oklch(38% 0.01 80); font-size:16px; line-height:1.6;">Bastrop's Best Property Management only handles properties after a tenant is in place. For leasing, listing, and tenant placement, our sister company <a href="https://wisdomhousetx.com" target="_blank" rel="noopener">Wisdom House Realty Group</a> finds and screens the right tenant — then we take over management from day one.</p>
+      </div>
+      <a href="https://wisdomhousetx.com" target="_blank" rel="noopener" style="white-space:nowrap; font-weight:700; border-bottom:2px solid oklch(45% 0.13 40); padding-bottom:2px;">Visit Wisdom House Realty →</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="max-width:1440px; margin:0 auto; padding:0 clamp(20px,4vw,48px) 96px;">
+    <h2 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(26px,3vw,34px); margin:0 0 12px;">What we handle after move-in</h2>
+    <p style="font-size:17px; color:oklch(38% 0.01 80); max-width:600px; margin:0 0 48px;">Full-service management for single-family homes and small multi-family properties across Bastrop County.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px;">
+      <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
+        <div style="border:1px solid oklch(88% 0.01 80); border-radius:4px; padding:32px; background:oklch(100% 0 0);">
+          <div style="width:44px; height:44px; border-radius:2px; background:oklch(20% 0.01 80); margin-bottom:20px;"></div>
+          <div style="font-weight:700; font-size:19px; margin-bottom:10px;">{{ svc.title }}</div>
+          <p style="margin:0; color:oklch(38% 0.01 80); font-size:15.5px; line-height:1.6;">{{ svc.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" style="background:oklch(20% 0.01 80); color:oklch(96% 0.006 80); padding:96px clamp(20px,4vw,48px);">
+    <div style="max-width:1440px; margin:0 auto;">
+      <h2 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(26px,3vw,34px); margin:0 0 48px;">How it works</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:40px;">
+        <sc-for list="{{ steps }}" as="step" hint-placeholder-count="3">
+          <div>
+            <div style="font-family:'Archivo',sans-serif; font-weight:900; font-size:44px; color:oklch(60% 0.1 40); margin-bottom:16px;">{{ step.n }}</div>
+            <div style="font-weight:700; font-size:19px; margin-bottom:10px;">{{ step.title }}</div>
+            <p style="margin:0; color:oklch(78% 0.01 80); font-size:15.5px; line-height:1.6;">{{ step.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTAL LOGIN -->
+  <section id="portal" style="max-width:1440px; margin:0 auto; padding:96px clamp(20px,4vw,48px);">
+    <h2 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(26px,3vw,34px); margin:0 0 12px;">Resident &amp; owner portal</h2>
+    <p style="font-size:17px; color:oklch(38% 0.01 80); max-width:640px; margin:0 0 40px;">Pay rent, submit maintenance requests, and view statements — all without leaving this site.</p>
+
+    <div style="border:1px solid oklch(88% 0.01 80); border-radius:4px; background:oklch(100% 0 0); overflow:hidden;">
+      <div style="padding:24px 32px; border-bottom:1px solid oklch(88% 0.01 80); font-weight:700; font-size:15px; color:oklch(30% 0.01 80);">Resident &amp; Owner Login</div>
+      <div style="padding:24px 24px 32px;">
+        <iframe src="{{ portalUrl }}" title="Bastrop's Best Property Management Resident & Owner Portal" style="width:100%; height:640px; border:1px solid oklch(88% 0.01 80); border-radius:4px; display:block;" loading="lazy"></iframe>
+        <div style="margin-top:20px; text-align:center;">
+          <a href="{{ portalUrl }}" target="_blank" rel="noopener" style="font-weight:700; font-size:15px;">Trouble loading? Open the portal in a new tab →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" style="max-width:1440px; margin:0 auto; padding:0 clamp(20px,4vw,48px) 96px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:56px; align-items:center; border:1px solid oklch(88% 0.01 80); border-radius:4px; padding:clamp(28px,4vw,48px); background:oklch(100% 0 0);">
+      <image-slot id="matt-walker-photo" shape="rounded" radius="4" placeholder="Photo of Matt Walker" style="width:100%; height:340px; display:block;"></image-slot>
+      <div>
+        <div style="font-size:13px; font-weight:700; letter-spacing:0.14em; color:oklch(45% 0.13 40); margin-bottom:14px;">MEET YOUR PROPERTY MANAGER</div>
+        <h2 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(24px,3vw,30px); margin:0 0 16px;">Matt Walker</h2>
+        <p style="font-size:16.5px; line-height:1.7; color:oklch(32% 0.01 80); margin:0;">Matt owns and manages Bastrop's Best Property Management, working directly with landlords across Bastrop County to keep their rentals well-maintained, rent-collected, and compliant. He also co-leads Wisdom House Realty Group, so owners get a single point of contact from tenant placement through day-to-day management.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section id="area" style="background:oklch(94% 0.01 60); padding:96px clamp(20px,4vw,48px);">
+    <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:64px; align-items:center;">
+      <div>
+        <h2 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(26px,3vw,34px); margin:0 0 20px;">Proudly serving Bastrop County</h2>
+        <p style="font-size:17px; color:oklch(32% 0.01 80); line-height:1.6; margin:0 0 28px;">{{ serviceAreaText }}</p>
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <sc-for list="{{ towns }}" as="town" hint-placeholder-count="6">
+            <span style="background:oklch(100% 0 0); border:1px solid oklch(84% 0.01 60); padding:8px 16px; border-radius:20px; font-size:14px; font-weight:600;">{{ town }}</span>
+          </sc-for>
+        </div>
+      </div>
+      <iframe src="https://maps.google.com/maps?q=Bastrop,+TX&z=10&output=embed" title="Map centered on Bastrop, TX" loading="lazy" style="width:100%; height:340px; display:block; border:0; border-radius:4px;"></iframe>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section id="contact" style="max-width:1440px; margin:0 auto; padding:96px clamp(20px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:64px;">
+    <div>
+      <h2 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(26px,3vw,34px); margin:0 0 20px;">Get a free rental analysis</h2>
+      <p style="font-size:17px; color:oklch(38% 0.01 80); line-height:1.6; margin:0 0 28px; max-width:460px;">Tell us about your property and we'll follow up with a management quote — usually within one business day.</p>
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:15.5px; color:oklch(30% 0.01 80);">
+        <div><strong>Phone:</strong> <a href="tel:+15129564714">512-956-4714</a></div>
+        <div><strong>Office:</strong> 1067 State Hwy 71 #A, Bastrop, TX 78602</div>
+        <div><strong>Service area:</strong> Bastrop County, TX</div>
+      </div>
+    </div>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="border:1px solid oklch(88% 0.01 80); border-radius:4px; padding:36px; background:oklch(100% 0 0); display:flex; flex-direction:column; gap:16px;">
+      <input name="name" required placeholder="Full name" style="padding:14px 16px; border:1px solid oklch(82% 0.01 80); border-radius:2px; font-size:15px; font-family:inherit; width:100%; box-sizing:border-box;">
+      <input name="property_address" required placeholder="Property address" style="padding:14px 16px; border:1px solid oklch(82% 0.01 80); border-radius:2px; font-size:15px; font-family:inherit; width:100%; box-sizing:border-box;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <input name="email" type="email" required placeholder="Email" style="padding:14px 16px; border:1px solid oklch(82% 0.01 80); border-radius:2px; font-size:15px; font-family:inherit; width:100%; box-sizing:border-box;">
+        <input name="phone" type="tel" placeholder="Phone" style="padding:14px 16px; border:1px solid oklch(82% 0.01 80); border-radius:2px; font-size:15px; font-family:inherit; width:100%; box-sizing:border-box;">
+      </div>
+      <textarea name="message" placeholder="Tell us about your property" rows="4" style="padding:14px 16px; border:1px solid oklch(82% 0.01 80); border-radius:2px; font-size:15px; font-family:inherit; resize:vertical; width:100%; box-sizing:border-box;"></textarea>
+      <button type="submit" style="background:oklch(20% 0.01 80); color:oklch(98% 0.006 80); padding:16px; border:none; border-radius:2px; font-weight:700; font-size:16px; cursor:pointer;">Send Request</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:oklch(20% 0.01 80); color:oklch(80% 0.01 80); padding:56px clamp(20px,4vw,48px) 32px;">
+    <div style="max-width:1440px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:32px;">
+      <div style="max-width:340px;">
+        <div style="font-family:'Archivo',sans-serif; font-weight:800; font-size:16px; color:oklch(98% 0.006 80); margin-bottom:10px;">BASTROP'S BEST<br><span style="font-weight:600; font-size:11px; letter-spacing:0.1em;">PROPERTY MANAGEMENT</span></div>
+        <p style="font-size:14px; line-height:1.6; margin:0;">Full-service property management for Bastrop County landlords.</p>
+      </div>
+      <div style="display:flex; gap:64px; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; gap:10px; font-size:14.5px;">
+          <a href="#services" style="color:oklch(80% 0.01 80);">Services</a>
+          <a href="#portal" style="color:oklch(80% 0.01 80);">Portal Login</a>
+          <a href="#contact" style="color:oklch(80% 0.01 80);">Contact</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px; font-size:14.5px;">
+          <a href="tel:+15129564714" style="color:oklch(80% 0.01 80);">512-956-4714</a>
+          <div>1067 State Hwy 71 #A, Bastrop, TX 78602</div>
+          <a href="https://wisdomhousetx.com" target="_blank" rel="noopener" style="color:oklch(80% 0.01 80);">Wisdom House Realty Group ↗</a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1440px; margin:40px auto 0; padding-top:24px; border-top:1px solid oklch(32% 0.01 80); font-size:13px; color:oklch(60% 0.01 80);">
+      © 2026 Bastrop's Best Property Management. All rights reserved.
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;portalUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://bastropsbest.managebuilding.com/Resident/portal/login&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;serviceAreaText&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;From Bastrop to Cedar Creek, Smithville to Elgin — if it's a rental home in Bastrop County, we manage it like our own.&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { tab: 'resident' };
+
+  services = [
+    { title: 'Rent Collection & Accounting', desc: 'On-time rent collection, owner disbursements, and transparent monthly financial reporting through the owner portal.' },
+    { title: '24/7 Maintenance Coordination', desc: 'Round-the-clock intake for repair requests, with vetted local vendors dispatched and tracked to completion.' },
+    { title: 'Tenant Screening & Renewals', desc: 'Background, credit, and rental history checks for renewals and any re-leasing, keeping good tenants in place.' },
+    { title: 'Eviction & Legal Compliance', desc: 'Lease enforcement, notices, and eviction proceedings handled correctly under Texas landlord-tenant law.' },
+  ];
+
+  steps = [
+    { n: '01', title: 'Tenant is placed', desc: 'Wisdom House Realty Group (or your existing lease) puts a qualified tenant in the property.' },
+    { n: '02', title: 'We take over management', desc: 'Bastrop\u2019s Best onboards the lease, sets up owner and resident portal access, and takes over day-to-day operations.' },
+    { n: '03', title: 'Owners get paid, tenants get service', desc: 'Rent flows in, maintenance gets handled, and you get a monthly statement \u2014 without lifting a finger.' },
+  ];
+
+  towns = ['Bastrop', 'Cedar Creek', 'Smithville', 'Elgin', 'Paige', 'Red Rock'];
+
+  renderVals() {
+    const portalUrl = this.props.portalUrl ?? 'https://bastropsbest.managebuilding.com/Resident/portal/login';
+    const serviceAreaText = this.props.serviceAreaText ?? 'From Bastrop to Cedar Creek, Smithville to Elgin \u2014 if it\u2019s a rental home in Bastrop County, we manage it like our own.';
+    return {
+      services: this.services,
+      steps: this.steps,
+      towns: this.towns,
+      portalUrl,
+      serviceAreaText,
+    };
+  }
+}
+</script>
+</body>
+</html>
